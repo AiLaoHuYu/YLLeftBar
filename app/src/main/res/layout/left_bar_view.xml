@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_left_frame"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/desktop_left_bg"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/main_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dimens10"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/main_left_img_ll"
+        android:layout_width="@dimen/dimens70"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimens55">
+
+        <ImageView
+            android:id="@+id/main_signal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimens5"
+            android:layout_weight="1"
+            android:src="@drawable/signal" />
+
+        <ImageView
+            android:id="@+id/main_wifi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimens5"
+            android:layout_weight="1"
+            android:src="@drawable/selector_wifi_0" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_left_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimens110"
+        android:layout_marginBottom="@dimen/dimens60"
+        android:overScrollMode="never" />
+
+    <ImageView
+        android:id="@+id/main_all_app"
+        android:layout_width="@dimen/dimens50"
+        android:layout_height="@dimen/dimens50"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/dimens10"
+        android:src="@drawable/all_app_unselected" />
+
+</FrameLayout>
